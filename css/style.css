@@ -1,0 +1,83 @@
+.center {
+    text-align: center; 
+}
+
+.auto {
+    margin-left: auto;
+    margin-right: auto; 
+}
+
+#page {
+    height: 100%;
+    overflow-y:scroll;
+    font-family: 'Raleway', sans-serif;    
+}
+
+#header {
+    display: flex;
+
+}
+
+#headerblock {
+    display: block; 
+}
+
+#title {
+    text-align: left; 
+    color: black;
+    margin-top: 30px;
+    margin-bottom: 30px; 
+    font-family: 'Lora', sans-serif; 
+    font-weight: 600;
+    font-size: 55px;
+    line-height: 0.9em; 
+}
+
+#selection {
+    margin-bottom: 30px; 
+
+}
+
+.button {
+    color: #F2E1AC;
+}
+
+.btn {
+    background-color: white;
+    border-radius: 0px;
+    border-width: 1px;
+    border-color: black; 
+}
+
+#clipbtncon {
+    position: relative;
+    top: -34px;
+    left: -31px;
+
+}
+
+#paragraph {
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    border-width: 1px;
+    border-color: black; 
+    border-style: solid;
+    margin-bottom: 30px;
+    padding: 0px 30px 30px 30px;    
+}
+
+.fadetext.ng-hide {
+    opacity: 0;
+}
+
+.fadetext{
+    -webkit-transition:all linear 0.5s;
+    transition:all linear 0.5s;
+    opacity: 1;
+}
+
+#text {
+    padding-left: 15px; 
+    padding-right: 15px;
+}
