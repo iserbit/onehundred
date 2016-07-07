@@ -21,10 +21,9 @@
       var quoteindex=0; 
       quotedata.quote=[]; 
       this.quote=[]; 
-      quoteindex=Math.floor(10*Math.random());
-      
       
       $http.get('/data/onehundred-quotes.json').success(function(data){
+        quoteindex=getRandom(0,data.quote.length);
   		  quotedata.quote = data.quote[quoteindex];
   	  });
     }
@@ -43,15 +42,21 @@
 
     };
     
+    function getRandom(min, max) {
+      return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+    
     
     var quotedata=this; 
     var quoteindex=0; 
     quotedata.quote=[]; 
     this.quote=[]; 
-    quoteindex=Math.floor(10*Math.random());
+    /*quoteindex=Math.floor(10*Math.random());*/
     
     
     $http.get('/data/onehundred-quotes.json').success(function(data){
+      quoteindex=getRandom(0,data.quote.length);
+      console.log(quoteindex); 
 		  quotedata.quote = data.quote[quoteindex];
 	  });
 	  
