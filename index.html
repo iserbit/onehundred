@@ -47,8 +47,7 @@
     
     <div ng-show="gen.disp" id="paragraph" class="fadetext">
       <button id="clipbtncon" class="clipbtn btn fadetext" data-clipboard-target="#paragraph">
-      Copy
-      </button>
+      <i class="fa fa-clipboard"></i><span style="margin-left: 10px">Copy</span></button>
       <section id = "text" ng-repeat="paragraph in gen.paragraph" class="row">
         <p>{{ paragraph }}</p>
       </section>
