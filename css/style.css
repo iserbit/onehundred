@@ -51,6 +51,19 @@
     border-color: black; 
 }
 
+#quote {
+    margin-top: 100px;
+    width: 700px;
+    text-align: center;
+    font-family: "Raleway", sans-serif; 
+    font-size: 20px;
+    padding: 30px;
+    background-color: white; 
+    border-color: black; 
+    border-width: 1px; 
+    border-style: solid; 
+}
+
 #clipbtncon {
     position: relative;
     top: -34px;
@@ -70,14 +83,37 @@
     padding: 0px 30px 30px 30px;    
 }
 
+.fadetext.ng-hide-add-active {
+  display: block!important;
+  -webkit-transition: 0.25s linear all;
+  transition: 0.25s linear all;
+  position: relative;
+  transition-delay: 0.5s; 
+}
+
+.fadetext.ng-hide-remove-active {
+  display: block!important;
+  -webkit-transition: 0.25s linear all;
+  transition: 0.25s linear all;
+  position: relative;
+}
+
+
 .fadetext.ng-hide {
     opacity: 0;
+    transition-delay: 0s; 
+    transition: 0s linear all; 
+
 }
 
 .fadetext{
-    -webkit-transition:all linear 0.5s;
-    transition:all linear 0.5s;
+    -webkit-transition:all linear 0.25s;
+    transition:all linear 0.25s;
     opacity: 1;
+    position: relative;
+    margin-left: auto; 
+    margin-right: auto; 
+    
 }
 
 #text {

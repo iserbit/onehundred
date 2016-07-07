@@ -39,13 +39,22 @@
             <button ng-click="gen.selection(3)" type="button" id="selbutton" class="btn btn-default">3</button>
             <button ng-click="gen.selection(4)" type="button" id="selbutton" class="btn btn-default">4</button>
             <button ng-click="gen.selection(5)" type="button" id="selbutton" class="btn btn-default">5</button>
+            <button ng-click="gen.cleartext()" type="button" id="selbutton" class="btn btn-default">CLEAR</button>
           </form>
         </div>
         </div>
       </div>
     </div>
     
-    <div ng-show="gen.disp" id="paragraph" class="fadetext">
+    <div id="quotecontainer" ng-controller="QuoteController as quotegen">
+      <div ng-hide="gen.disp" id="quote" class="auto fadetext">
+        <i class="fa fa-quote-left fa-1x"></i>
+        <span style="margin-left: 5px; margin-right: 5px;">{{ gen.quote }}</span>
+        <i class="fa fa-quote-right fa-1x"></i>
+      </div>
+    </div>    
+    
+    <div ng-show="gen.disp" id="paragraph" class="">
       <button id="clipbtncon" class="clipbtn btn fadetext" data-clipboard-target="#paragraph">
       <i class="fa fa-clipboard"></i><span style="margin-left: 10px">Copy</span></button>
       <section id = "text" ng-repeat="paragraph in gen.paragraph" class="row">
