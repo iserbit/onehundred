@@ -2,9 +2,9 @@
 <html ng-app="IpsumGenerator">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
- 
+
     <title>One Hundred Years of Lorem Ipsum</title>
-    
+
     <!-- JavaScripts-->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
@@ -15,16 +15,16 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/normalize.css">
- 
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Lora|Raleway" rel="stylesheet">    
-    
+    <link href="https://fonts.googleapis.com/css?family=Lora|Raleway" rel="stylesheet">
+
     <!-- App -->
-    <script type="text/javascript" src="/js/app.js"></script>
+    <script type="text/javascript" src="./js/app.js"></script>
   </head>
-  
+
   <body id="page" class="container-fluid" ng-controller="GenController as gen">
 
     <div id="header" class="auto">
@@ -46,30 +46,30 @@
         </div>
       </div>
     </div>
-    
+
     <div id="quotecontainer" ng-controller="QuoteController as quotegen">
       <div ng-hide="gen.disp" id="quote" class="auto fadetext">
         <i class="fa fa-quote-left fa-1x"></i>
         <span style="margin-left: 5px;">{{ gen.quote }}</span>
-      
+
       </div>
-    </div>    
-    
+    </div>
+
     <div ng-show="gen.disp" id="paragraph" class="">
       <button id="clipbtncon" class="clipbtn btn fadetext" data-clipboard-target="#paragraph">
       <i class="fa fa-clipboard"></i><span style="margin-left: 10px">Copy</span></button>
       <section id = "text" ng-repeat="paragraph in gen.paragraph" class="row">
         <p>{{ paragraph }}</p>
       </section>
-      
+
     </div>
-      
+
   </body>
-  
+
   <script>
   (function(){
     new Clipboard('.clipbtn');
   })();
   </script>
-  
+
 </html>
